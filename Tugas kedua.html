@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Eduwork</title>
+    <style>
+        /* CSS dasar untuk layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #;
+        }
+
+        /* Menu */
+        .menu {
+        display: flex;
+        justify-content: space-between; /* Pisahkan elemen kiri dan kanan */
+        align-items: center; /* Vertikal rata tengah */
+        background-color: #0b5fd5;
+        padding: 10px 20px;
+    }
+
+    .menu .left {
+        flex: 1; /* Brand di sebelah kiri */
+    }
+
+    .menu .left a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .menu .right {
+        display: flex; /* Group elemen kanan */
+        gap: 15px; /* Spasi antar link */
+    }
+
+    .menu .right a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        padding: 5px 10px;
+    }
+
+    .menu .right a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+        /* Section 2 - Judul di Kiri dan Gambar di Kanan */
+        .section {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Pastikan dua kolom dengan ukuran yang sama */
+            gap: 20px;
+            padding: 50px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        .section h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .section p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .section button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .section button:hover {
+            background-color: #0056b3;
+        }
+
+        .section img {
+            width: 100%;  /* Menyesuaikan lebar gambar agar tidak keluar dari grid */
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Section 3 - Biodata dengan 6 Box */
+        .biodata {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        background-color: #fff;
+        padding: 40px;
+        margin-top: 20px;
+    }
+
+    .biodata h2 {
+        grid-column: span 3;
+        text-align: center;
+        font-size: 30px;
+        color: #007BFF;
+    }
+
+    .biodata .description {
+        font-size: 18px;
+        color: #666;
+        text-align: left; /* Teks rata kiri pada layar besar */
+        grid-column: span 3;
+    }
+
+    .biodata div {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .biodata div strong {
+        font-size: 18px;
+        color: #007BFF;
+    }
+
+    /* Responsif pada layar kecil */
+    @media (max-width: 768px) {
+        .biodata .description {
+            text-align: center; /* Teks rata tengah pada layar kecil */
+        }
+    }
+        /* Section 4 - Portofolio */
+    
+    .portofolio {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 40px;
+        background-color: #f7f7f7;
+    }
+
+    .portofolio h2 {
+        grid-column: span 2;
+        text-align: center;
+        font-size: 30px;
+        color: #007bff;
+    }
+
+    .portofolio .project {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .portofolio .project img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+    }
+
+    .portofolio .project h3 {
+        margin-top: 10px;
+        font-size: 22px;
+        color: #333;
+    }
+
+    .portofolio .project p {
+        font-size: 16px;
+        color: #666;
+    }
+</style>
+
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Menu -->
+    <div class="menu">
+        <div class="left">
+            <a href="#section1">Brand</a>
+        </div>
+        <div class="right">
+            <a href="#section3">Biodata</a>
+            <a href="#section2">Header</a>
+            <a href="#section4">Portofolio</a>
+        </div>
+    </div>
+    
+
+    <!-- Section 2 Judul dan Gambar -->
+    <div class="section" id="section2">
+        <div>
+            <h1>Hallo!!!</h1>
+            <p>Selamat datang di portofolio saya! Temukan berbagai karya dan pengalaman yang mencerminkan perjalanan profesional saya. Jangan ragu untuk menjelajahi lebih jauh dan menghubungi saya jika ada pertanyaan atau kesempatan untuk bekerja sama</p>
+            <button>Pelajari lebih lanjut</button>
+        </div>
+        <div>
+            <img src="porto.jpg" alt="gambar dari folder">
+        </div>
+    </div>
+
+    <!-- Section 3: Biodata dengan 6 Box -->
+    <div class="biodata" id="section3">
+        <h2>About me</h2>
+        <br><p align="center">Halo! Saya adalah seorang Front-End Developer yang senang mengubah ide menjadi antarmuka digital yang memukau. Dengan kombinasi desain estetis dan kode efisien, saya menciptakan pengalaman pengguna yang seamless dan penuh makna. Passion saya terletak pada detail, performa, dan keindahan web modern</p><br>
+        <div><strong> Name </strong> : junaedi</div>
+        <div><strong>Education</strong> : smk jaya wisata 1</div>
+        <div><strong>Pekerjaan</strong> : Travel consultant</div>
+        <div><strong>Contact</strong> : 089601299330</div>
+        <div><strong>Hobi</strong> : coding, gym</div>
+        <div><strong>Alamat</strong> : jakarta</div>
+    </div>
+
+    <!-- Section 4: Portofolio -->
+    <div class="portofolio" id="section4">
+        <h2>Portofolio</h2>
+        <div class="project">
+            <img src="https://asset-2.tstatic.net/banjarmasin/foto/bank/images/tampilan-baru-beranda-instagram-yang-kini-memiliki-tombol-reels-dan-instagram-shopping.jpg" alt="gambarplaceholder">
+            <h4>Proyek 1</h4>
+            <p>social media yang bisa di akses oleh semua kalangan untuk tampilannya sendiri seperti social media instagram</p>
+        </div>
+        <div class="project">
+            <img src="https://lh6.googleusercontent.com/Su6PY1fYFxvms-P9_9sVJk1P1dWIaBOczbLMa31VSTvbEuAsuvWkgyPc0NS4mNxW0jqD-JtFwIAaR6-HQOWEvwspRVykOffZY8hgPRiMAJ0RslFnJFdBdBYbNVyjfaEAQGnyJ2AX4gx4aHfwGBljFgH0_S7wysQZa-fO3jXAksGRuzPTt4ZAuaZMaQ" alt="gambarplaceholder">
+            <h4>Proyek 2</h4>
+            <p>Website ini dibuat untuk restoran Rempah Wangi, yang mengusung tema kuliner tradisional Indonesia dengan cita rasa khas rempah-rempah. Desain website dirancang untuk mencerminkan identitas budaya dan kekayaan rasa yang menjadi nilai jual utama restoran ini.</p>
+        </div>
+        <div class="project">
+            <img src="https://badoystudio.com/wp-content/uploads/2024/05/contoh-website-rumah-sakit.webp" alt="gambarplaceholder">
+            <h4>Proyek 3</h4>
+            <p>Website ini dirancang untuk sebuah layanan kesehatan bernama Life Line Hospital. Fokus utama proyek ini adalah menciptakan pengalaman digital yang profesional dan ramah pengguna, memberikan informasi lengkap tentang layanan medis kepada pasien potensial.</p>
+        </div>
+        <div class="project">
+            <img src="https://saudagarwp.com/wp-content/uploads/2021/12/demo-default.webp" alt="gambarplaceholder">
+            <h4>Proyek 4</h4>
+            <p>Website ini dirancang untuk sebuah platform e-commerce bernama Saudagar, yang bertujuan memberikan pengalaman belanja online terbaik kepada pengguna. Proyek ini berfokus pada desain yang responsif, memastikan tampilan yang optimal baik pada perangkat desktop maupun mobile.</p>
+        </div>
+    </div>
+
+</body>
+</html>
