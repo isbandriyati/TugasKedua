@@ -49,45 +49,47 @@
         border-radius: 5px;
     }
 
-        /* Section 2 - Judul di Kiri dan Gambar di Kanan */
-        .section {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Pastikan dua kolom dengan ukuran yang sama */
-            gap: 20px;
-            padding: 50px;
-            background-color: #fff;
-            margin-top: 20px;
-        }
+      /* Section 2 - Judul di Kiri dan Gambar di Kanan */
+.section {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Menyebarkan ruang antara teks dan gambar */
+    align-items: center; /* Vertikal rata tengah */
+    padding: 50px;
+    background-color: #fff;
+    margin-top: 20px;
+}
 
-        .section h1 {
-            font-size: 36px;
-            color: #333;
-        }
+.section h1 {
+    font-size: 36px;
+    color: #333;
+    max-width: 50%; /* Membatasi lebar teks agar tidak memenuhi seluruh ruang */
+}
 
-        .section p {
-            color: #666;
-            font-size: 18px;
-        }
+.section p {
+    color: #666;
+    font-size: 18px;
+}
 
-        .section button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.section button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        .section button:hover {
-            background-color: #0056b3;
-        }
+.section button:hover {
+    background-color: #0056b3;
+}
 
-        .section img {
-            width: 100%;  /* Menyesuaikan lebar gambar agar tidak keluar dari grid */
-            max-width: 600px;
-            height: auto;
-            border-radius: 10px;
-        }
+.section img {
+    width: 100%;  /* Menyesuaikan lebar gambar agar tidak keluar dari grid */
+    max-width: 500px; /* Menentukan lebar maksimum gambar */
+    height: auto;
+    border-radius: 10px;
+}
+
 
         /* Section 3 - Biodata dengan 6 Box */
         .biodata {
@@ -104,6 +106,13 @@
         text-align: center;
         font-size: 30px;
         color: #007BFF;
+    }
+
+    
+    .descriptionAboutMe {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .biodata .description {
@@ -141,6 +150,32 @@
         padding: 40px;
         background-color: #f7f7f7;
     }
+
+    /* Animasi untuk kolom proyek */
+.project {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+}
+
+/* Efek saat mouse diarahkan ke proyek */
+.project:hover {
+    transform: translateY(-10px); /* Mengangkat elemen sedikit ke atas */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Menambah bayangan */
+}
+
+/* Animasi gambar dalam proyek */
+.project img {
+    transition: transform 0.3s ease; /* Efek transisi gambar */
+}
+
+.project:hover img {
+    transform: scale(1.05); /* Memperbesar gambar sedikit */
+}
+
 
     .portofolio h2 {
         grid-column: span 2;
@@ -205,15 +240,20 @@
     </div>
 
     <!-- Section 3: Biodata dengan 6 Box -->
+    <h2 align="center">About me</h2>
+    <div
+    <div class="descriptionAboutMe">
+    <p>Halo! Saya adalah seorang Front-End Developer yang senang mengubah ide menjadi antarmuka digital yang memukau. Dengan kombinasi desain estetis dan kode efisien, saya menciptakan pengalaman pengguna yang seamless dan penuh makna. Passion saya terletak pada detail, performa, dan keindahan web modern</p>
+    </div class="container-2">
+    </div>
     <div class="biodata" id="section3">
-        <h2>About me</h2>
-        <br><p align="center">Halo! Saya adalah seorang Front-End Developer yang senang mengubah ide menjadi antarmuka digital yang memukau. Dengan kombinasi desain estetis dan kode efisien, saya menciptakan pengalaman pengguna yang seamless dan penuh makna. Passion saya terletak pada detail, performa, dan keindahan web modern</p><br>
         <div><strong> Name </strong> : junaedi</div>
         <div><strong>Education</strong> : smk jaya wisata 1</div>
         <div><strong>Pekerjaan</strong> : Travel consultant</div>
         <div><strong>Contact</strong> : 089601299330</div>
         <div><strong>Hobi</strong> : coding, gym</div>
         <div><strong>Alamat</strong> : jakarta</div>
+    </div>
     </div>
 
     <!-- Section 4: Portofolio -->
